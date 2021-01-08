@@ -75,6 +75,7 @@ class Students extends Component
         }
     }
 
+    use WithPagination;
     public function render()
     {
         $searchTerm = '%'.$this->searchTerm.'%';

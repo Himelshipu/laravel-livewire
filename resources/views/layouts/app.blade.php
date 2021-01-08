@@ -75,11 +75,11 @@
                 </div>
             </div>
         </nav>
-
-        <main class="py-2">
-            @yield('content')
-        </main>
     </div>
+    <div class="container my-2">
+        {{ $slot }}
+    </div>
+
     @livewireScripts
     <script>
         window.livewire.on('studentAdded',()=>{
@@ -88,6 +88,10 @@
 
         window.livewire.on('studentUpdated',()=>{
             $('updateStudentModal').modal('hide');
+        });
+
+        window.livewire.on('fileUploaded',()=>{
+            $(#form-upload)[0].reset();
         });
     </script>
 
