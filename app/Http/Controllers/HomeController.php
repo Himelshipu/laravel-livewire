@@ -30,4 +30,10 @@ class HomeController extends Controller
     {
         return view('contact');
     }
+
+    public function student()
+    {
+        return view('all-students');
+    }
+
 }

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Livewire\Students;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +24,6 @@ Auth::routes();
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('/all-students', [HomeController::class, 'student'])->name('students');
+
+// Route::get('/all-students',App\Http\Livewire\Students::class);

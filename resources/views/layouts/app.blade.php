@@ -76,11 +76,20 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="py-2">
             @yield('content')
         </main>
     </div>
     @livewireScripts
-    
+    <script>
+        window.livewire.on('studentAdded',()=>{
+            $('addStudentModal').modal('hide');
+        });
+
+        window.livewire.on('studentUpdated',()=>{
+            $('updateStudentModal').modal('hide');
+        });
+    </script>
+
 </body>
 </html>
