@@ -4,11 +4,11 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-success">Contact page with Livewire</div>
+                <div class="card-header bg-success">Contact page with Laravel Livewire</div>
 
                 <div class="card-body">
-                    @livewire('contact-info')
 
+                    @livewire('contact-info')
                 </div>
             </div>
         </div>
